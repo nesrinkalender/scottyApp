@@ -7,9 +7,11 @@
 
 Then run 
 
+#### `cd scottyApp`
+
 #### `npm install`
 
-#### `cd scottyApp`
+
 
 
 Runs the app<br />
