@@ -1,15 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import { Text, View, ScrollView, Image, StyleSheet, SafeAreaViewBase, SafeAreaView } from 'react-native';
+import { Text, View, ScrollView, StyleSheet, SafeAreaView } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 
 
-function FavoritesScreen() {
+function FavoritesScreen({navigation}) {
   const [list, setList] = useState('');
 
   useEffect(() => {
-    AsyncStorage.getItem("favorites").then((value) => {
-      setList(JSON.parse(value));
+    navigation.addListener('focus', () => {
+      AsyncStorage.getItem("favorites").then((value) => {
+        setList(JSON.parse(value));
+      });
     });
+
   },[])
 
   return (

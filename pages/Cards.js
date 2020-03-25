@@ -1,11 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 import { Text, View, StyleSheet, Dimensions, Animated, PanResponder, Image} from 'react-native';
-import data from "../data.json"
 import { TouchableOpacity } from 'react-native-gesture-handler';
-const SCREEN_WIDTH = Dimensions.get('window').width;
 import Svg, { Path, G } from 'react-native-svg'
 import AsyncStorage from '@react-native-community/async-storage';
+import data from "../data.json"
 
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export default class Cards extends React.Component {
     constructor(props) {
